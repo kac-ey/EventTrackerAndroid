@@ -1,9 +1,11 @@
 # EventTrackerAndroid
 
 **Goals**
+
 The primary purpose of the “Event Tracking” app is to provide users with a way to track and remember scheduled events. The app will need to require users to create an account with a username and password and should request this login information from the user going forward to access their account. Once logged in, the app should display a list of the events the user has entered. Users should be able to add and remove events when desired. Events should include a name or title, a time, and a description containing any additional information the user would like to add. Lastly, the app should send a notification to the user on the day the event is scheduled. All user and event information should be stored in a table format on a database.
 
 **Users**
+
 The following user groups could benefit from this app:
 1.	Elderly people. Many apps that are currently available offer a wide array of features that can be overwhelming to anyone who is not technically savvy. This is especially true for those who spent most of their life interacting with little to no technology. Due to the simplicity of this app, it will be much easier for this population to use. People in this stage of their lives tend to also be forgetful, meaning an application that they can understand how to navigate is that much more valuable to them. Since most people in this user group are retired, they will have the time to engage with the app. However, their patience with learning the features of the application will affect how much time they are willing to engage with it. This means the app design needs to be straightforward and consistent, with only the necessary features to meet their needs.
 2.	Stay-at-home parents. These users tend to have a busy, constantly changing schedule. They are frequently out running errands or attending to their child, so they may not have access to other devices. However, they will generally have access to their phones. Their routines are constantly changing, from frequent doctor’s appointments with babies to early school pick-ups. An app that allows them to keep track of this conglomeration on events without bombarding them with features they don’t need or use and doesn’t require much of their time to become familiar with is valuable for them. They won’t have much time to learn the features and functions of the application, so simplicity and consistency are a priority.
@@ -11,6 +13,7 @@ The following user groups could benefit from this app:
 Overall, the most important elements for this app when considering its potential users is simplicity, consistency, and efficiency. The app should have straightforward navigation, neutral color themes, and easy and quick access to frequent functions.
 
 **UI Design**
+
 1.	Login Screen. 	The first screen that should be displayed is the login screen, requesting input for a user’s username and password. The textPassword input type should be used for the user’s password to maintain security. Once they have entered their information and clicked the “Login” button, they should be directed to the “Event list” page.
 2.	Event List Screen. There should be an app bar with an overflow menu containing the option to “Logout”. A grid with four columns should be displayed. These columns should be titled “Date”, “Start Time”, “End Time”, and “Event Name”. An event should not be created if this information is not supplied. A user can click on the event, which will display the “Event Details Screen”.
 3.	Create Event Screen. The app will have a floating action button to add an event. There will be eight input boxes: “Event Name”, “Start Time Hour”, “Start Time Minute”, “End Time Hour”, “End Time Minute”, “Description”, “Date Day”, and “Date Year”. There will also be a scrolling list to select the “Date Month”. At the bottom of the screen, the options “Cancel” and “Save” will be present. “Save” will not be functional until all input areas, except “Description”, are filled and valid. Clicking “Cancel” and “Save” both return the user to the “Event List Screen.”
@@ -18,4 +21,5 @@ Overall, the most important elements for this app when considering its potential
 5.	Edit Event Screen. This screen will be identical to the “Create Event Screen”, with the exception that all previously provided information will obviously be displayed. If an input box is emptied, “Save” will not be functional until all input areas, except “Description”, are filled and valid. Clicking “Cancel” and “Save” will both return the user to the “Event List Screen”.
 
 **Code Implementation**
+
 All input boxes (event information, except event month, and username/password) will be EditText input types contained in the XML layout. As previously mentioned, the password will user textPassword input type. The event date and time will use number input type. The description and title will use textMultiLine input type. Since displaying 12 months at once can take up significant space, a RecyclerView widget will be used for the event month. The app will need an XML menu resource to house the overflow menu for the “Logout” function.
