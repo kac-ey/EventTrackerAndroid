@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditEvent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <EditText
+        android:id="@+id/editTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/text_title"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/dateButton"
+        style="?android:spinnerStyle"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:text="@string/date_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTitle"
+        android:onClick="datePicker"/>
+
+    <Button
+        android:id="@+id/startTimeButton"
+        style="?android:spinnerStyle"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:text="@string/start_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateButton"
+        android:onClick="timePicker"/>
+
+    <Button
+        android:id="@+id/endTimeButton"
+        style="?android:spinnerStyle"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:clickable="true"
+        android:text="@string/end_spinner"
+        app:layout_constraintStart_toEndOf="@+id/startTimeButton"
+        app:layout_constraintTop_toTopOf="@+id/startTimeButton"
+        android:onClick="timePicker"/>
+
+    <EditText
+        android:id="@+id/editDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/text_description"
+        android:inputType="textMultiLine"
+        android:textColorHint="#757575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startTimeButton"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="48dp"
+        android:clickable="true"
+        android:text="@string/delete_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDescription"
+        app:cornerRadius="20dp"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="72dp"
+        android:clickable="true"
+        android:text="@string/save_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/deleteButton"
+        app:cornerRadius="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

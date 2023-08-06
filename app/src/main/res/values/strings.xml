@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Event Tracker</string>
+    <string name="create_account">Create Account</string>
+    <string name="submit_button">Submit</string>
+    <string name="allow_button">Allow</string>
+    <string name="deny_button">Deny</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="save_button">Save</string>
+    <string name="delete_button">Delete</string>
+    <string name="text_username">Username</string>
+    <string name="text_password">Password</string>
+    <string name="text_title">Title</string>
+    <string name="text_description">Description</string>
+    <string name="action_logout">Logout</string>
+    <string name="delete_confirm">Permanently delete this event?</string>
+    <string name="delete_warning">Events cannot be recovered once deleted.</string>
+    <string name="date_spinner">Date</string>
+    <string name="start_spinner">Start Time</string>
+    <string name="end_spinner">End Time</string>
+</resources>
